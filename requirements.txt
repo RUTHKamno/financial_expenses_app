@@ -5,4 +5,4 @@ Pillow==12.1.0
 plotly==6.5.2
 scikit_learn==1.8.0
 streamlit==1.53.0
-torch==2.9.1+cu126
+torch==2.9.1
