@@ -292,7 +292,53 @@ with st.sidebar:
 
 # PAGE 1: ACCUEIL
 if menu == "🏠 Accueil":
-    st.write('in home page')
+    # Bouton de retour vers l'application principale (en haut de la page)
+    
+    main_app_url = "https://financialexpensesapp-9awpz2jup7lf58fuke4ozz.streamlit.app/"
+    
+    col1, col2, col3 = st.columns([1, 3, 1])
+    
+    with col1:
+        st.markdown(f"""
+        <a href="{main_app_url}" target="_blank" style="text-decoration: none;">
+            <button style="background: linear-gradient(135deg, #DC143C 0%, #FF6B6B 100%);
+                           color: white; border: none; padding: 10px 20px; 
+                           border-radius: 8px; cursor: pointer; font-weight: 600;
+                           font-size: 14px; display: flex; align-items: center; gap: 8px;
+                           box-shadow: 0 2px 8px rgba(220, 20, 60, 0.3);
+                           transition: transform 0.2s;">
+                ← Retour à l'App Principale
+            </button>
+        </a>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+        <div style="text-align: center;">
+            <span style="color: #DC143C; font-weight: 600; font-size: 16px;">
+                ⚡ Application PyTorch - Prédictions Avancées
+            </span>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown("</div></div>", unsafe_allow_html=True)
+    
+    # Contenu de la page d'accueil
+    show_header(
+        "Application PyTorch",
+        "Prédictions avec Deep Learning"
+    )
+    
+    # Bannière d'information
+    st.markdown("""
+    <div style="background: linear-gradient(135deg, #FFE5E5 0%, #FFFFFF 100%); 
+                padding: 20px; border-radius: 10px; border-left: 4px solid #DC143C; margin-bottom: 30px;">
+        <p style="margin: 0; color: #333; font-size: 16px;">
+            <b>ℹ️ Navigation :</b> Vous êtes actuellement sur l'application <b>PyTorch</b>. 
+            Pour revenir à l'application principale (TensorFlow), utilisez le bouton "Retour" ci-dessus.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
     # bouton de retour vers l'paplication initiale
 # PAGE 2: PRÉDICTIONS (PyTorch)
 elif menu == "⚡ Prédictions PyTorch":
